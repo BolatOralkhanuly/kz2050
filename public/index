@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Цифровой Казахстан 2050 — маршрут в будущее</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e8;--surf:#fffaf1;--text:#14172a;--mut:#5d6075;--line:#e2d9c8;--a:#5b3df5;--b:#00957f;--c:#e8590c;--hdr:rgba(246,241,232,.9);--sea:#efe7d8;--land:#fffaf1;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0d1c;--surf:#12162b;--text:#eef0ff;--mut:#9aa0c4;--line:#252a4a;--a:#8f7bff;--b:#2ee6c5;--c:#ffb35c;--hdr:rgba(10,13,28,.88);--sea:#0d1226;--land:#171d3d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0d1c;--surf:#12162b;--text:#eef0ff;--mut:#9aa0c4;--line:#252a4a;--a:#8f7bff;--b:#2ee6c5;--c:#ffb35c;--hdr:rgba(10,13,28,.88);--sea:#0d1226;--land:#171d3d;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--hdr);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:56px}
+nav{display:flex;gap:18px;align-items:center;font-size:.9rem;font-weight:600}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--a)}
+.logo{letter-spacing:.1em;font-size:.85rem;font-weight:800}
+#th{border:1px solid var(--line);background:var(--surf);color:var(--text);border-radius:50%;width:32px;height:32px;cursor:pointer}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.k{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--b);font-weight:800}
+h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:.2em 0 0;letter-spacing:-.02em;font-weight:800}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:.2em 0 .4em;letter-spacing:-.01em;font-weight:800}
+h3{margin:0 0 .3em;font-size:1.2rem}
+p{margin:0 0 1em}.mut{color:var(--mut)}.sm{font-size:.85rem}
+.gr{background:linear-gradient(100deg,var(--b),var(--a),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.big{font-size:clamp(5rem,19vw,11rem);font-weight:800;line-height:.95;letter-spacing:-.05em;margin-bottom:.1em}
+.hero{background:radial-gradient(50% 70% at 90% 10%,color-mix(in srgb,var(--a) 22%,transparent),transparent),radial-gradient(40% 60% at 0% 100%,color-mix(in srgb,var(--b) 18%,transparent),transparent)}
+.hg{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:64px}
+.lead{font-size:1.1rem;max-width:32em}
+.btn{display:inline-block;padding:12px 22px;border-radius:14px;border:1.5px solid var(--a);color:var(--a);text-decoration:none;font:inherit;font-weight:800;cursor:pointer;background:transparent;margin:0 8px 8px 0}
+.btn.p{background:var(--a);color:var(--bg)}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:24px}
+.ticket{background:var(--surf);border:2px dashed var(--line);border-radius:26px;padding:22px;text-align:center;transform:rotate(2.5deg);box-shadow:0 20px 50px -20px color-mix(in srgb,var(--a) 45%,transparent)}
+#qr{width:200px;height:200px;margin:12px auto;background:#fff;padding:8px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#51657a;font-size:.8rem}
+#qr img{width:100%!important;height:auto!important;display:block}
+input,select,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit;font-size:.95rem}
+.ticket input{font-size:.72rem;text-align:center}
+label.l{display:block;font-weight:600;font-size:.85rem;margin:18px 0 6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
+.tab,.chip{border:1px solid var(--line);background:var(--surf);color:var(--text);border-radius:999px;padding:8px 16px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}
+.tab.on,.chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.vp{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:start}
+.arr{font-size:2rem;color:var(--c);font-weight:800}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.mapw{display:grid;grid-template-columns:1.7fr 1fr;gap:20px;margin-top:20px;align-items:start}
+#map{width:100%;height:auto;display:block;border-radius:22px;border:1px solid var(--line);background:radial-gradient(var(--line) 1px,transparent 1.5px) 0 0/22px 22px,var(--sea)}
+.land{fill:var(--land);stroke:var(--b);stroke-width:2.5;stroke-linejoin:round}
+.nb{fill:var(--mut);font-size:13px;letter-spacing:.2em;font-weight:700;opacity:.55}
+.mk{cursor:pointer;outline:none}.mk .hit{fill:transparent}
+.mk .dot{fill:var(--c);stroke:var(--bg);stroke-width:2.5}
+.mk .ring{display:none;fill:none;stroke:var(--b);stroke-width:2}
+.mk.on .dot{r:11;fill:var(--b)}.mk.on .ring{display:block}
+.mk:focus-visible .dot{stroke:var(--text)}
+@media (prefers-reduced-motion:no-preference){.mk.on .ring{animation:p 1.6s ease-out infinite}}
+@keyframes p{from{r:10;opacity:1}to{r:26;opacity:0}}
+#lb{font-size:15px;font-weight:800;fill:var(--text);paint-order:stroke;stroke:var(--sea);stroke-width:4px;pointer-events:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{padding:6px 12px;font-size:.8rem}
+.fut{border-left:3px solid var(--c);padding-left:12px;margin-top:14px;font-size:.92rem}
+.sv{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin-top:24px;align-items:start}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{position:relative;display:block}.tile input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.tile span{display:block;padding:12px;border:1.5px solid var(--line);border-radius:14px;font-size:.88rem;font-weight:600;background:var(--bg)}
+.tile input:checked+span{background:var(--a);color:var(--bg);border-color:var(--a)}
+.tile input:focus-visible+span{outline:2px solid var(--text);outline-offset:2px}
+input[type=range]{padding:0;accent-color:var(--a)}
+.rl{display:flex;justify-content:space-between;font-size:.88rem;margin-top:12px}
+.bar{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--b),var(--a),var(--c));transition:width .4s}
+ul{padding-left:18px;margin:8px 0}li{margin-bottom:6px;font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--mut)}
+@media (max-width:800px){.hg,.mapw,.sv{grid-template-columns:1fr}.vp{grid-template-columns:1fr}.arr{display:none}.ticket{transform:none;max-width:320px}nav a{display:none}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header><div class="w"><b class="logo">◆ QAZAQSTAN <span class="gr">2050</span></b>
+<nav><a href="#future">Векторы</a><a href="#map-section">Карта</a><a href="#survey">Опрос</a><button id="th" aria-label="Сменить тему">◐</button></nav></div></header>
+
+<main>
+<div class="hero"><div class="w hg">
+<div><div class="k">Digital Qazaqstan</div><h1>Цифровой<br>Казахстан</h1><div class="big gr">2050</div>
+<p class="lead mut">Страна, где технологии работают на людей, а степи, горы и города живут в одном ритме. Пройди маршрут по карте и скажи, каким ты хочешь её видеть.</p>
+<a class="btn p" href="#map-section">Начать маршрут ↓</a><a class="btn" href="#survey">Дать свой ответ</a></div>
+<div class="ticket"><div class="k">Билет в 2050</div><div id="qr"></div><p class="mut sm">Сканируй, чтобы открыть сайт</p><input id="qurl" aria-label="Ссылка в QR-коде" placeholder="Ссылка на сайт"></div>
+</div></div>
+
+<section id="future"><div class="w">
+<div class="k">Пять векторов</div><h2>Из чего строится 2050</h2>
+<div class="tabs" id="tabs"></div>
+<div class="card vp" aria-live="polite"><div><span class="tag">Сегодня</span><p id="v1" style="margin:6px 0 0"></p></div><div class="arr">→</div><div><span class="tag" style="color:var(--b)">2050</span><p id="v2" style="margin:6px 0 0;font-weight:600"></p></div></div>
+</div></section>
+
+<section id="map-section" style="padding-top:0"><div class="w">
+<div class="k">Маршрут по стране</div><h2>12 мест, ради которых стоит строить будущее</h2>
+<div class="tabs" id="fl" style="margin-bottom:0"></div>
+<div class="mapw">
+<div><svg id="map" viewBox="0 0 940 540" role="img" aria-label="Схематичная карта Казахстана с достопримечательностями"></svg><div class="chips" id="chips"></div></div>
+<div class="card" aria-live="polite"><span class="tag" id="pt"></span><h3 id="ph" style="font-size:1.4rem"></h3><p id="pd" class="mut"></p><div class="fut"><b>Идея 2050.</b> <span id="pf"></span></div></div>
+</div></div></section>
+
+<section id="survey" style="padding-top:0"><div class="w">
+<div class="k">Твой голос важен</div><h2>Каким ты хочешь видеть Казахстан?</h2>
+<p class="mut" id="st"></p>
+<div class="sv">
+<form class="card" id="f">
+<b>Что главное в стране 2050 года?</b><div class="tiles" id="tiles" style="margin-top:10px"></div>
+<label class="l" for="dg">Насколько цифровой она должна быть: <b id="dv">70%</b></label>
+<input type="range" id="dg" min="0" max="100" value="70"><div class="rl sm mut" style="margin-top:2px"><span>Живые традиции</span><span>Максимум технологий</span></div>
+<label class="l" for="rg">Твой регион</label><select id="rg" required></select>
+<label class="l" for="idea">Твоя идея (необязательно)</label><textarea id="idea" rows="3" maxlength="200" placeholder="Например: беспилотные такси в каждом городе"></textarea>
+<p style="margin:16px 0 0"><button class="btn p" type="submit">Отправить ответ →</button></p>
+<div id="msg" class="mut sm" aria-live="polite"></div>
+</form>
+<div class="card">
+<h3>Результаты</h3>
+<p class="mut" style="margin:0">Ответов: <b id="cnt" style="color:var(--text)">0</b> · средний уровень цифровизации: <b id="avgt" style="color:var(--text)">—</b></p>
+<div class="bar" style="height:14px"><i id="avg" style="width:0"></i></div>
+<div id="res"></div><div id="ideas"></div>
+</div>
+</div></div></section>
+</main>
+
+<footer><div class="w"><b>QAZAQSTAN 2050</b><br>Будущее начинается с нашей идеи.</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+$('#th').onclick=()=>{const d=document.documentElement;const c=d.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');d.dataset.theme=c==='dark'?'light':'dark'};
+
+/* QR */
+const qrEl=$('#qr'),qu=$('#qurl');
+let base=location.href.split('#')[0];if(!/^https?:/.test(base))base='';
+qu.value=base;
+function drawQR(){qrEl.textContent='';const v=qu.value.trim();if(!v||typeof QRCode==='undefined'){qrEl.textContent='Вставьте ссылку на сайт';return}
+new QRCode(qrEl,{text:v,width:200,height:200,colorDark:'#14172a',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}
+qu.oninput=drawQR;drawQR();
+
+/* векторы */
+const VEC=[['Цифровое государство','Госуслуги постепенно переезжают в смартфон.','Одно приложение вместо очередей и ИИ-помощник для каждого жителя.'],
+['Умные города','Города растут и ищут баланс между удобством и природой.','Беспилотный транспорт, чистый воздух и парки в пешей доступности.'],
+['Чистая энергия','Степи богаты ветром и солнцем.','Ветровые и солнечные станции дают чистую энергию каждому региону.'],
+['Образование','Знания всё доступнее онлайн.','ИИ-наставник и лучшие курсы мира есть в каждой школе, даже в самом дальнем ауле.'],
+['Новая экономика','Появляются стартапы и технопарки.','Страна новых профессий: от агротеха до космической инженерии.']];
+VEC.forEach((v,i)=>{const b=document.createElement('button');b.className='tab';b.type='button';b.textContent=v[0];b.onclick=()=>vec(i);$('#tabs').append(b)});
+function vec(i){$$('.tab').forEach((b,j)=>b.classList.toggle('on',i===j));$('#v1').textContent=VEC[i][1];$('#v2').textContent=VEC[i][2]}
+vec(0);
+
+/* карта */
+const B=[[47.2,45.9],[48.6,46.5],[50,46.9],[51.6,46.9],[53.2,46.6],[53.4,45.6],[52.2,44.9],[50.4,44.6],[50.8,43.9],[51.2,43.3],[52.6,42.6],[52.8,41.8],[53.1,41.3],[55,41.3],[56,41.3],[56.9,42.2],[58.2,43.5],[58.5,45],[60,44.3],[61.2,44.2],[62,43.5],[63.5,43.7],[66,43],[67.8,41.2],[69,41],[70.3,41.6],[70.8,42.6],[73.6,42.9],[75,42.9],[77,43],[78.5,42.9],[79.5,42.4],[80.2,42.2],[80.4,43.1],[79.9,44.9],[82.3,45.2],[82.6,45.4],[83,47],[85.5,47.05],[87.3,49.1],[86.8,49.8],[84.3,50.3],[82.9,50.9],[81.1,50.8],[80,50.9],[77.8,53.3],[76.3,53.9],[73.5,53.9],[71,54.1],[69.1,55.2],[67,54.9],[65.3,54.7],[62.5,54],[61.3,53],[61.3,51.4],[60,50.8],[57,51.1],[55.7,50.6],[54,51.1],[52.4,51.6],[50.7,51.7],[48.9,50.2],[47.5,50.4],[46.8,49.4],[46.5,48.4],[47,47.3]];
+const P=(lo,la)=>[20+(lo-45.5)*21.44,20+(56.2-la)*32];
+const PL=[
+["Астана — Байтерек","Столица",71.43,51.13,"Монумент «Байтерек» — символ новой столицы и главная точка притяжения Астаны.","Цифровой двойник города, беспилотный транспорт и все госуслуги в одном приложении."],
+["Алматы — Медеу и Шымбулак","Город и горы",77.06,43.16,"Высокогорный каток Медеу и горнолыжный курорт Шымбулак в предгорьях Заилийского Алатау.","Умный туризм: виртуальные гиды и точные прогнозы для горных маршрутов."],
+["Чарынский каньон","Природа",79.08,43.35,"Каньон с причудливыми красными скалами, которые формировались миллионы лет. Его часто сравнивают с Гранд-Каньоном.","Дроны и датчики следят за состоянием скал, а AR показывает, как менялся каньон."],
+["Кольсайские озёра","Природа",78.32,42.99,"Цепь горных озёр в Тянь-Шане, которую называют жемчужиной северного Тянь-Шаня.","Экотропы с солнечными станциями и электротранспортом без вреда для природы."],
+["Туркестан — мавзолей Ясави","Наследие ЮНЕСКО",68.27,43.3,"Мавзолей Ходжи Ахмеда Ясави — объект Всемирного наследия ЮНЕСКО и духовный центр тюркского мира.","3D-реконструкции и онлайн-экскурсии, доступные людям по всему миру."],
+["Бурабай","Природа",70.28,53.08,"Курортный национальный парк с озёрами, соснами и гранитными скалами — «казахстанская Швейцария».","Зелёный курорт без выбросов и умное распределение потока туристов."],
+["Байконур","Космос",63.31,45.62,"Первый в мире космодром: отсюда стартовали первый спутник и Юрий Гагарин.","Центр космических технологий и подготовки инженеров будущего."],
+["Урочище Бозжыра","Природа",54.7,43.2,"Белоснежные и розовые скалы на плато Устюрт — один из самых необычных пейзажей Мангистау.","Спутниковый интернет по всему региону для безопасных путешествий."],
+["Озеро Балхаш","Природа",74.6,46.6,"Одно из крупнейших озёр мира: западная часть пресная, восточная — солёная.","Умный мониторинг уровня воды и здоровья экосистемы."],
+["Алтай — Катон-Карагай","Горы",85.6,49.2,"Горы Казахстанского Алтая, ледники и альпийские луга рядом с Белухой — высочайшей вершиной Алтая.","Климатические датчики и ИИ-прогнозы для сохранения ледников."],
+["Аксу-Жабаглы","Заповедник",70.5,42.4,"Старейший заповедник Центральной Азии, основан в 1926 году: каньоны, горы и дикие тюльпаны.","Фотоловушки и ИИ помогают беречь редких животных."],
+["Малое Аральское море","Экология",61.3,46.4,"Север Аральского моря удалось частично вернуть благодаря плотине Кокарал — пример восстановления природы.","Спутниковый контроль воды и возвращение рыбных промыслов."]];
+
+const G=t=>/Столица|Город/.test(t)?'Города':/Наследие/.test(t)?'Наследие':/Космос/.test(t)?'Космос':'Природа';
+const svg=$('#map');
+let h='<path class="land" d="'+B.map((p,i)=>(i?'L':'M')+P(p[0],p[1]).map(v=>v.toFixed(1)).join(' ')).join('')+'Z"/>';
+[['РОССИЯ',60,55.7],['КИТАЙ',84.2,43.6],['УЗБЕКИСТАН',61.5,41.6],['КЫРГЫЗСТАН',74.5,41.3],['Каспийское море',47.6,43.6]].forEach(([t,lo,la])=>{const[x,y]=P(lo,la);h+='<text class="nb" x="'+x.toFixed(0)+'" y="'+y.toFixed(0)+'">'+t+'</text>'});
+PL.forEach((p,i)=>{const[x,y]=P(p[2],p[3]);h+='<g class="mk" tabindex="0" role="button" aria-label="'+p[0]+'" data-i="'+i+'" transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+')"><circle class="ring" r="10"/><circle class="hit" r="20"/><circle class="dot" r="8"/></g>'});
+svg.innerHTML=h+'<text id="lb" text-anchor="middle"></text>';
+const chips=$('#chips');
+PL.forEach((p,i)=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=p[0].split(' — ')[0];b.dataset.i=i;chips.append(b)});
+['Все','Города','Природа','Наследие','Космос'].forEach(g=>{const b=document.createElement('button');b.className='tab f';b.type='button';b.textContent=g;b.dataset.g=g;$('#fl').append(b)});
+function pick(i){const p=PL[i];
+ $$('.mk,.chip').forEach(e=>e.classList.toggle('on',+e.dataset.i===i));
+ $('#pt').textContent=p[1];$('#ph').textContent=p[0];$('#pd').textContent=p[4];$('#pf').textContent=p[5];
+ const[x,y]=P(p[2],p[3]),l=$('#lb');l.textContent=p[0].split(' — ')[0];l.setAttribute('x',Math.min(850,Math.max(70,x)).toFixed(0));l.setAttribute('y',(y-22).toFixed(0))}
+function flt(g){$$('.f').forEach(b=>b.classList.toggle('on',b.dataset.g===g));let f=-1;
+ $$('.mk,.chip').forEach(e=>{const ok=g==='Все'||G(PL[e.dataset.i][1])===g;e.style.display=ok?'':'none';if(ok&&f<0)f=+e.dataset.i});pick(f)}
+svg.addEventListener('click',e=>{const m=e.target.closest('.mk');if(m)pick(+m.dataset.i)});
+svg.addEventListener('keydown',e=>{const m=e.target.closest('.mk');if(m&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(+m.dataset.i)}});
+chips.addEventListener('click',e=>{const c=e.target.closest('.chip');if(c)pick(+c.dataset.i)});
+$('#fl').addEventListener('click',e=>{const b=e.target.closest('.f');if(b)flt(b.dataset.g)});
+flt('Все');
+
+/* опрос: общая база (db), без неё — локально */
+const PR=['Цифровое государство','ИИ и технологии','Умные города','Чистая энергия и экология','Образование','Экономика и профессии'];
+const RG='Астана,Алматы,Шымкент,Абай,Акмолинская область,Актюбинская область,Алматинская область,Атырауская область,Восточно-Казахстанская область,Жамбылская область,Жетісу,Западно-Казахстанская область,Карагандинская область,Костанайская область,Кызылординская область,Мангистауская область,Павлодарская область,Северо-Казахстанская область,Туркестанская область,Ұлытау'.split(',');
+$('#rg').innerHTML='<option value="">Выбери регион</option>'+RG.map(x=>'<option>'+x+'</option>').join('');
+$('#tiles').innerHTML=PR.map((p,i)=>'<label class="tile"><input type="radio" name="pr" value="'+i+'" required><span>'+p+'</span></label>').join('');
+$('#dg').oninput=()=>$('#dv').textContent=$('#dg').value+'%';
+const KEY='dk2050_v2';
+let online=false,loc=[],V=[];
+try{loc=JSON.parse(localStorage.getItem(KEY))||[]}catch(e){}
+V=loc;
+function show(){
+ $('#st').textContent=online?'Общий опрос: ответы всех участников собираются в одной базе.':'Нет связи с сервером: ответы сохраняются только на этом устройстве.';
+ const A=V.filter(v=>v&&v.p>=0&&v.p<PR.length),n=A.length;
+ $('#cnt').textContent=n;
+ const av=n?Math.round(A.reduce((s,v)=>s+Math.min(100,Math.max(0,+v.d||0)),0)/n):0;
+ $('#avgt').textContent=n?av+'%':'—';$('#avg').style.width=av+'%';
+ const r=$('#res');r.textContent='';
+ PR.forEach((p,i)=>{const c=A.filter(v=>v.p===i).length,pc=n?Math.round(c*100/n):0;
+  const d=document.createElement('div');d.innerHTML='<div class="rl"><span></span><b>'+c+'</b></div><div class="bar"><i style="width:'+pc+'%"></i></div>';
+  d.querySelector('span').textContent=p;r.append(d)});
+ const el=$('#ideas');el.textContent='';
+ if(!n){el.innerHTML='<p class="mut" style="margin-top:16px">Пока нет ответов. Стань первым участником!</p>';return}
+ const li=A.filter(v=>v.i).sort((a,b)=>b.t-a.t).slice(0,6);
+ if(li.length){const t=document.createElement('p');t.style.cssText='margin:18px 0 0;font-weight:800;font-size:.85rem';t.textContent='Свежие идеи';const u=document.createElement('ul');
+  li.forEach(v=>{const x=document.createElement('li');x.textContent='«'+String(v.i).slice(0,200)+'» — '+String(v.r||'').slice(0,40);u.append(x)});el.append(t,u)}}
+const CID=(()=>{try{let c=localStorage.getItem('dk2050_cid');if(!c){c=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(36).slice(2);localStorage.setItem('dk2050_cid',c)}return c}catch(e){return 'x'+Date.now()+Math.random().toString(36).slice(2)}})();
+async function load(){try{const r=await fetch('/api/votes',{cache:'no-store'});if(!r.ok)throw 0;V=await r.json();online=true}catch(e){online=false;V=loc}show()}
+$('#f').addEventListener('submit',async e=>{e.preventDefault();const m=$('#msg');
+ const v={p:+new FormData(e.target).get('pr'),d:+$('#dg').value,r:$('#rg').value,i:$('#idea').value.trim().slice(0,200)};
+ try{
+  const r=await fetch('/api/votes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...v,cid:CID})});
+  if(r.status===429){m.textContent='Слишком много отправок. Подожди минуту и попробуй снова.';return}
+  if(!r.ok)throw 0;
+  m.textContent='Спасибо! Твой ответ учтён. Отправь форму снова, чтобы изменить его.';await load()
+ }catch(x){
+  loc=[{...v,t:Date.now()}];try{localStorage.setItem(KEY,JSON.stringify(loc))}catch(y){}
+  V=loc;online=false;m.textContent='Нет связи с сервером. Ответ сохранён на этом устройстве.';show()}});
+load();setInterval(()=>{if(!document.hidden)load()},20000);
+</script>
+</body>
+</html>
