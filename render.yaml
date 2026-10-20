@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: digital-kazakhstan-2050
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # вставьте строку подключения к Postgres в панели Render
